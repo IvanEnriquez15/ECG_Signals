@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <meta charset="utf-8" />
+    <title>Señales ECG</title>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css">
+	
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+</head>
+
+<body class="alert alert-dark">
+    <div class="row">
+        <div class="col-sm-12">
+			<div class="alert alert-light">
+				<canvas id="chart-senal-ecg" data-plugin="chart" height="100"></canvas>
+			</div>
+        </div>
+		<div class="col-sm-6">
+            <div class="box">
+				<div class="alert alert-light">
+					<table class="table">
+						<thead>
+							<tr>
+								<th style="width:360px;">Parámetro</th>
+								<th>Valor</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Cantidad de ciclos</td>
+								<td id="lbl-cantidad-ciclos"></td>
+							</tr>
+							<tr>
+								<td>Frecuencia cardiaca promedio</td>
+								<td id="lbl-frecuencia-cardiaca-promedio"></td>
+							</tr>
+							<tr>
+								<td>Ritmo cardiaco</td>
+								<td id="lbl-ritmo-cardiaco"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>				
+			</div>                       
+        </div>
+		<div class="col-sm-6">
+            <div class="box">
+				<div class="alert alert-light">
+					<table class="table">
+						<thead>
+							<tr>
+								<th style="width:60px;">Ciclo	</th>
+								<th>Tiempo (segundos)</th>
+								<th>Frecuencia cardiaca instantánea (bpm)</th>
+								<th>Ritmo Cardiaco</th>
+								<th>Amplitud  QRS (mV)</th>
+							</tr>
+						</thead>
+						<tbody id="tbody-frecuencias-instantaneas">
+						</tbody>
+					</table>
+				</div>				
+			</div>                       
+        </div>
+    </div>
+
+    <script src="controller.index.js"></script>
+</body>
+</html>
